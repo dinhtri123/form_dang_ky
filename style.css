@@ -90,6 +90,9 @@ img {
   font-size: 16px;
   font-family: "Inter", serif;
 }
+.form-item select option {
+  color: #000;
+}
 .form-main h4 {
   margin-bottom: 20px;
 }

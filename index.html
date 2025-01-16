@@ -83,17 +83,17 @@
           <h4>Hộ khẩu thường trú (Ghi đầy đủ, chính xác như trong sổ hộ khẩu)</h4>
           <div class="form-input" style="grid-template-columns: repeat(4, 1fr);">
             <div class="form-item">
-              <select name="" id="">
+              <select class="province-select" id="" data-select="1">
                 <option value="" selected>Chọn tỉnh/thành phố</option>
               </select>
             </div>
             <div class="form-item">
-              <select name="" id="">
+              <select class="district-select" id="" data-select="1">
                 <option value="" selected>Quận/Huyện</option>
               </select>
             </div>
             <div class="form-item">
-              <select name="" id="">
+              <select class="ward-select" id="" data-select="1">
                 <option value="" selected>Xã/Phường/Thị Trấn</option>
               </select>
             </div>
@@ -168,17 +168,17 @@
           <h4>Nơi tốt nghiệp</h4>
           <div class="form-input" style="grid-template-columns: repeat(3, 1fr);">
             <div class="form-item">
-              <select name="" id="">
+              <select class="province-select" id="" data-select="2">
                 <option value="" selected>Chọn tỉnh/thành phố</option>
               </select>
             </div>
             <div class="form-item">
-              <select name="" id="">
+              <select class="district-select" id="" data-select="2">
                 <option value="" selected>Quận/Huyện</option>
               </select>
             </div>
             <div class="form-item">
-              <select name="" id="">
+              <select class="ward-select" id="" data-select="2">
                 <option value="" selected>Xã/Phường/Thị Trấn</option>
               </select>
             </div>
@@ -245,6 +245,7 @@
       },
     });
   </script>
+  <script src="./index.js"></script>
 </body>
 
 </html>
