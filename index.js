@@ -65,3 +65,34 @@ fetch("./dvhcvn.json")
     populateSelects(data);
   })
   .catch((error) => console.error("Error loading JSON:", error));
+fetch("./chuyenganh.json")
+  .then((response) => response.json())
+  .then((json) => {
+    const sectorSelect = document.querySelector("#sector-select");
+    const majorSelect = document.querySelector("#major-select");
+
+    // Populate sector dropdown
+    json.fields.forEach((field) => {
+      const option = document.createElement("option");
+      option.value = field.sector;
+      option.textContent = field.sector;
+      sectorSelect.appendChild(option);
+    });
+
+    sectorSelect.addEventListener("change", function () {
+      majorSelect.innerHTML = '<option value="">Chuyên ngành</option>';
+      const selectedSector = this.value;
+      const selectedField = json.fields.find(
+        (field) => field.sector === selectedSector
+      );
+      if (selectedField) {
+        selectedField.majors.forEach((major) => {
+          const option = document.createElement("option");
+          option.value = major;
+          option.textContent = major;
+          majorSelect.appendChild(option);
+        });
+      }
+    });
+  })
+  .catch((error) => console.error("Error loading JSON:", error));
