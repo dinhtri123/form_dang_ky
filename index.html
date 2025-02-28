@@ -17,10 +17,6 @@
           <img src="./images/banner1.png" class="md" alt="">
           <img src="./images/banner1_sm.png" class="sm" alt="">
         </div>
-        <div class="swiper-slide">
-          <img src="./images/banner2.png" class="md" alt="">
-          <img src="./images/banner2_sm.png" class="sm" alt="">
-        </div>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
@@ -30,6 +26,38 @@
       <h2>PHIẾU ĐĂNG KÝ HỌC</h2>
       <div class="container">
         <form action="">
+          <h3 class="title-section">QUÉT THÔNG TIN GIẤY TỜ XÁC THỰC HỒ SƠ NHẬP HỌC</h3>
+          <div class="form-input form-input-cc" style="grid-template-columns: 1.5fr 1.5fr 3fr">
+            <div class="form-item">
+              <p><strong>Ảnh CMND/CCCD mặt trước</strong><span>(bắt buộc)</span></p>
+              <div class="form-item-preview">
+                <img src="./images/cccd-mt.png" alt="">
+              </div>
+              <div class="form-item-file">
+                <input type="file" name="cccd_mt" id="cccd_mt">
+              </div>
+            </div>
+            <div class="form-item">
+              <p><strong>Ảnh CMND/CCCD mặt sau</strong><span>(bắt buộc)</span></p>
+              <div class="form-item-preview">
+                <img src="./images/cccd-ms.png" alt="">
+              </div>
+              <div class="form-item-file">
+                <input type="file" name="cccd_ms" id="cccd_ms">
+              </div>
+            </div>
+            <div class="form-item">
+              <p><strong>Bản sao công chứng Bằng tốt nghiệp THPT</strong><span>Hoặc giấy chứng nhận tốt nghiệp tạm thời
+                  (không bắt
+                  buộc)</span></p>
+              <div class="form-item-preview">
+                <img src="./images/bang-tot-nghiep-thpt.png" alt="">
+              </div>
+              <div class="form-item-file">
+                <input type="file" name="bangtn" id="bangtn">
+              </div>
+            </div>
+          </div>
           <h3 class="title-section">Thông tin thí sinh</h3>
           <div class="form-input" style="grid-template-columns: repeat(4, 1fr);">
             <div class="form-item">
@@ -37,6 +65,12 @@
                 Họ và tên
               </label>
               <input type="text" name="hoten" id="hoten" placeholder="Họ và tên">
+            </div>
+            <div class="form-item">
+              <label for="ngaysinh">
+                Ngày sinh
+              </label>
+              <input type="date" name="ngaysinh" id="ngaysinh">
             </div>
             <div class="form-item">
               <label for="gioitinh">
@@ -48,18 +82,13 @@
               </select>
             </div>
             <div class="form-item">
-              <label for="ngaysinh">
-                Ngày sinh
-              </label>
-              <input type="date" name="ngaysinh" id="ngaysinh">
-            </div>
-            <div class="form-item">
               <label for="dantoc">
                 Dân tộc
               </label>
               <input type="text" name="dantoc" id="dantoc" placeholder="Kinh">
             </div>
           </div>
+
           <div class="form-input" style="grid-template-columns: repeat(3, 1fr);">
             <div class="form-item">
               <label for="cmnd">
@@ -127,8 +156,8 @@
               <input type="text" name="sdtphuhuynh" id="sdtphuhuynh" placeholder="0987654321">
             </div>
           </div>
-          <h3 class="title-section">Thông tin đăng ký cao đẳng anh quốc BTEC FPT</h3>
-          <div class="form-input" style="grid-template-columns: 1.5fr 3fr">
+          <h3 class="title-section">Thông tin đăng ký trường cao đẳng FPT POLYTECHNIC</h3>
+          <div class="form-input" style="grid-template-columns: repeat(2, 1fr)">
             <div class="form-item">
               <label for="coso">
                 Cơ sở nhập học
@@ -137,9 +166,23 @@
                 <option value="hanoi" selected>Hà Nội</option>
               </select>
             </div>
+            <div class="form-item"></div>
+          </div>
+          <div class="form-input" style="grid-template-columns: repeat(2, 1fr)">
             <div class="form-item option_columns">
               <label for="nguyenvong">
-                Nguyện vọng
+                Nguyện vọng thứ nhất
+              </label>
+              <select name="" id="sector-select">
+                <option value="" selected>Ngành</option>
+              </select>
+              <select name="" id="major-select">
+                <option value="" selected>Chuyên ngành</option>
+              </select>
+            </div>
+            <div class="form-item option_columns">
+              <label for="nguyenvong">
+                Nguyện vọng thứ hai
               </label>
               <select name="" id="sector-select">
                 <option value="" selected>Ngành</option>
@@ -149,6 +192,7 @@
               </select>
             </div>
           </div>
+
           <div class="form-input" style="grid-template-columns: repeat(2, 1fr);">
             <div class="form-item">
               <label for="namtotnghiep">
